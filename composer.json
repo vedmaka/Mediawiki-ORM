@@ -10,6 +10,7 @@
 	},
     "autoload": {
         "files": [
+        	"classes/sanitization.php",
         	"classes/model.php",
         	"classes/query.php",
         	"classes/belongsto.php",
