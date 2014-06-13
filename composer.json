@@ -10,6 +10,9 @@
 	},
     "autoload": {
         "files": [
+        	"classes/fuel.php",
+        	"classes/arr.php",
+        	"classes/date.php",
         	"classes/sanitization.php",
         	"classes/model.php",
         	"classes/query.php",
