@@ -10,8 +10,9 @@
 	},
     "autoload": {
         "files": [
-        	"ActiveRecordSetup.php"
-        	"ActiveRecord.php"
+        	"ActiveRecordSetup.php",
+        	"ActiveRecord.php",
+        	"ActiveRecordMediawiki.php",
         ]
     },
     "authors": [
