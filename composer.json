@@ -1,7 +1,7 @@
 {
 	"name": "mediawiki/orm",
 	"type": "mediawiki-extension",
-	"description": "PHP-ActiveRecord integration for Mediawiki",
+	"description": "ActiveRecord integration for Mediawiki",
 	"homepage": "http://www.mediawiki.org/wiki/Extension:ORM",
 	"license" : "GPL-2.0+",
 	"keywords": ["ORM"],
