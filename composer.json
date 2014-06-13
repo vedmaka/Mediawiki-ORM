@@ -1,0 +1,44 @@
+{
+	"name": "mediawiki/orm",
+	"type": "mediawiki-extension",
+	"description": "ORM mediawiki developers",
+	"homepage": "http://www.mediawiki.org/wiki/Extension:ORM",
+	"license" : "GPL-2.0+",
+	"keywords": ["ORM"],
+	"require": {
+		"composer/installers": ">=1.0.1"
+	},
+    "autoload": {
+        "files": [
+        	"classes/model.php",
+        	"classes/query.php",
+        	"classes/belongsto.php",
+        	"classes/hasmany.php",
+        	"classes/hasone.php",
+        	"classes/manymany.php",
+        	"classes/relation.php",
+        	"classes/model/soft.php",
+        	"classes/query/soft.php",
+        	"classes/model/temporal.php",
+        	"classes/query/temporal.php",
+        	"classes/model/nestedset.php",
+        	"classes/observer.php",
+        	"classes/observer/createdat.php",
+        	"classes/observer/typing.php",
+        	"classes/observer/updatedat.php",
+        	"classes/observer/validation.php",
+        	"classes/observer/self.php",
+        	"classes/observer/slug.php",
+        	"classes/model.php",
+        	"orm.php"
+        ]
+    },
+    "authors": [
+		{
+			"name": "Vedmaka",
+			"homepage": "https://www.mediawiki.org/wiki/User:Vedmaka",
+			"role": "Developer"
+		}
+	],
+    "minimum-stability": "dev"
+}
