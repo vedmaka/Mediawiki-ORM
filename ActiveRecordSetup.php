@@ -9,7 +9,7 @@
  * @author Vedmaka < god.vedmaka@gmail.com >
  */
 
-global $wgVersion,$wgExtensionCredits,$wgResourceModules,$wgExtensionMessagesFiles,$wgAutoloadClasses,$wgSpecialPages;
+global $wgVersion,$wgExtensionCredits,$wgResourceModules,$wgExtensionMessagesFiles,$wgAutoloadClasses,$wgSpecialPages,$wgDBtype,$wgDBserver,$wgDBname,$wgDBuser,$wgDBpassword,$wgExtensionFunctions;
 
 if ( !defined( 'MEDIAWIKI' ) ) {
     die('Not an entry point.');
@@ -62,3 +62,24 @@ $wgSpecialPages['Orm'] = 'ActiveRecordOrmSpecial';
 
 /* Hooks */
 #$wgHooks['example_hook'][] = 'ModelHooks::onExampleHook';
+
+$wgExtensionFunctions[] = 'initActiveRecordMediawiki';
+
+function initActiveRecordMediawiki() {
+	ActiveRecord\Config::initialize( function ( $cfg ) {
+		global $wgDBtype, $wgDBserver, $wgDBname, $wgDBuser, $wgDBpassword;
+
+		$cfg->set_model_directory( '.' );
+		$cfg->set_connections( array(
+			'production' => "$wgDBtype://$wgDBuser:$wgDBpassword@$wgDBserver/$wgDBname"
+		) );
+		$cfg->set_default_connection( 'production' );
+	} );
+
+}
+
+/**
+ * @property int cost
+ * @property string title
+ */
+class Book extends ActiveRecord\Model {}

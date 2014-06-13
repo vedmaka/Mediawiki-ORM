@@ -22,6 +22,9 @@ class ActiveRecordOrmSpecial extends SpecialPage {
 		$this->setHeaders();
 
 		$out = $this->getOutput();
+
+		$out->addHTML('Hello!');
+
 	}
 
 }
