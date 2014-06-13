@@ -9,7 +9,7 @@
  * @author Vedmaka < god.vedmaka@gmail.com >
  */
 
-global $wgVersion,$wgExtensionCredits,$wgResourceModules,$wgExtensionMessagesFiles,$wgAutoloadClasses;
+global $wgVersion,$wgExtensionCredits,$wgResourceModules,$wgExtensionMessagesFiles,$wgAutoloadClasses,$wgSpecialPages;
 
 if ( !defined( 'MEDIAWIKI' ) ) {
     die('Not an entry point.');
@@ -58,7 +58,7 @@ $wgResourceModules['ext.Model.main'] = array(
 #$wgGroupPermissions['sysop']['example_rights'] = true;
 
 /* Special Pages */
-#$wgSpecialPages['Model'] = 'ModelSpecial';
+$wgSpecialPages['Orm'] = 'ActiveRecordOrmSpecial';
 
 /* Hooks */
 #$wgHooks['example_hook'][] = 'ModelHooks::onExampleHook';

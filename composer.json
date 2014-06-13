@@ -12,7 +12,8 @@
         "files": [
         	"ActiveRecord.php",
         	"ActiveRecordMediawiki.php",
-        	"ActiveRecordSetup.php"
+        	"ActiveRecordSetup.php",
+        	"ActiveRecordOrmSpecial.php"
         ]
     },
     "authors": [
